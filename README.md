@@ -1,13 +1,22 @@
-#Reaction-diffusion-simulator
+# Reaction-diffusion-simulator
 
-Small toolbox for simulating reaction diffusion equations of the type ![RDE](/images/reactiondiffusionequations.png) with the diffusion matrix ![DM](/images/diffusionmatrix.png) in MATLAB using finite differences. The space is discretized by finite differences and translated to a big ODE system which is solved using MATLABs `ode15s` solver.
+Small toolbox for simulating reaction diffusion equations of the type 
+
+![RDE](/images/reactiondiffusionequations.png) 
+
+with the diffusion matrix 
+
+![DM](/images/diffusionmatrix.png) 
+
+The space is discretized by finite differences and translated to a big ODE system which is solved using MATLABs `ode15s` solver.
 
 ## Features
 * Simulation of reaction diffusion equations in one or two spatial dimensions. 
 * Zeroflux and periodic boundary conditions. 
-* Easy setup of a model.
+* Easy model setup.
 * Spatially dependend parameter possible. 
 * Import of D2D models (https://github.com/Data2Dynamics)
+* 
 
 ## Setup models
 
