@@ -7,7 +7,7 @@
 
 function reSetY0(idY0)
 % re.Y0opt.kind:
-% ['xstep'], 'circle', '2dgaussian', 'constant', '1dgaussian', 'xrange'
+% ['xstep'], 'circle', '2dgaussian', '1dgaussian', 'xrange', 'constant','random'
 % re.Y0opt.x0: middle of circle, gaussians, step or range
 % re.Y0ot.c:  multiplicative constant which determines max(Y0(ctr,:))
 % re.Y0opt.sigma: variance of gaussians
@@ -38,11 +38,19 @@ if ~isfield(re,'Y0opt') % standard values
         re.Y0opt(i).sigma = 0.05;
         re.Y0opt(i).c = 1;
     end
+else
+    for i=1:length(re.Y0opt)
+        re.Y0opt(i).kinds = {'xstep', 'circle', '2dgaussian', '1dgaussian', 'xrange', 'constant','random'};
+    end
 end
 
 kind = re.Y0opt(idY0).kinds{re.Y0opt(idY0).idkind};
-x0 = re.Y0opt(idY0).x0;
-sigma = re.Y0opt(idY0).sigma;
+if isfield(re.Y0opt(idY0),'x0')
+    x0 = re.Y0opt(idY0).x0;
+end
+if isfield(re.Y0opt(idY0),'sigma')
+    sigma = re.Y0opt(idY0).sigma;
+end
 c = re.Y0opt(idY0).c;
 
 [x, y] = meshgrid(linspace(0,1,re.PDE.xmax),linspace(0,1,re.PDE.ymax));
@@ -55,7 +63,7 @@ switch kind
     case 'constant'
         Y0(:) = c;
     case 'random'
-        Y0 = c * ones(size(x)) .* (1 + sigma .* randn(size(x)));
+        Y0 = c * ones(size(x)) .* (1+ sigma .* randn(size(x)));
     case 'circle'
         % circle around x0
         Y0 = c * ( (x-x0(1)).^2+(y-x0(2)).^2<sigma );
