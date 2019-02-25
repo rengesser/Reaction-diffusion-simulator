@@ -33,6 +33,6 @@ PARAMETERFIELDS
 ...
 ```
 
-The section `STATES` containes a list of the dynamical states together with a boolean variable if the state is diffusive. The section `EQUATIONS` contains a list with the ODE defining the reaction part `f(u(x,t))` of the reaction diffusion equations. The section `PARAMETERFIELDS` specifies all dynamical parameters which are spatially depend. See the example `Diffusion_from_Source` for some use cases. 
+The section `STATES` contains a list of the dynamical states `u` together with a boolean variable specifying if the state is diffusive. The section `EQUATIONS` contains a list with the ordinary differential equations (ODEs) defining the reaction part `f(u(x,t))` of the reaction diffusion equation `f(u(x,t))`. The section `PARAMETERFIELDS` specifies all dynamical parameters which are spatially depend, i.e. `k = k(x)`. See the example `Diffusion_from_Source` for some use cases. 
 
 
