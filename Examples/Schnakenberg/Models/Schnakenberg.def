@@ -1,0 +1,11 @@
+STATES   // "name"  diffusion_true (1 mobile, 0 immobile)
+activator   1
+inhibitor    1
+
+EQUATIONS    // The ODE which specifies the reactions  
+" Gamma * (a - activator + activator^2*inhibitor) "
+" Gamma * (b - activator^2*inhibitor) "
+
+
+PARAMETERFIELDS  // dynamical parameter which are spatially depend
+   
