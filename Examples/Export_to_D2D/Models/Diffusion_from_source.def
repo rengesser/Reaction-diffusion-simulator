@@ -1,0 +1,16 @@
+// Morphogen-Gradient model 
+STATES   // "name"  diffusion_true (1 mobile, 0 imobile)
+gradients      1
+output1        0
+output2        0
+
+
+EQUATIONS    // The ODE which specifies the reactions  
+" b_grad * bool_b_grad - k_deg_grad * gradients "
+" gradients^2/(Km_grad^2 + gradients^2) * b_output1 - k_deg_output1 * output1 "
+" b_JAK   - k_deg_output2 * output2 - k_deg_output2_by_output1 * output1 * output2 "
+
+
+PARAMETERFIELDS  // dynamical parameter which are spatially depend
+bool_b_grad 
+   
