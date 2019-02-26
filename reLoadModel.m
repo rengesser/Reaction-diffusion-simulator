@@ -58,11 +58,13 @@ end
 % % PARAMETERFIELDS (space dependent parameters, denoted with px)
 str=textscan(fid,'%s',1,'commentStyle','//');
 parafields={};
-while(~strcmp(str{1},'INITS') && (~strcmp(str{1},'DERIVED')))
-    parafields=str{:};
-    str=textscan(fid,'%s',1,'commentStyle','//');
-    if isempty(str{1})
-        break
+if ~isempty(str{1})
+    while(~strcmp(str{1},'INITS') && (~strcmp(str{1},'DERIVED')))
+        parafields=str{:};
+        str=textscan(fid,'%s',1,'commentStyle','//');
+        if isempty(str{1})
+            break
+        end
     end
 end
 

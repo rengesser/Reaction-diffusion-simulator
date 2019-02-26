@@ -1,4 +1,8 @@
 addpath('../../')
+%% Example for exporting a discretized PDE to the D2D framework.
+% Usefull, when you want to fit with small PDE models. 
+% You need the Data2Dynamics framework installed (see
+% https://github.com/Data2Dynamics/d2d)
 
 reLoadModel('Diffusion_from_source.def')
 
