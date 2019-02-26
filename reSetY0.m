@@ -14,13 +14,12 @@ function reSetY0(idY0)
 
 global re
 
+if ~isfield(re.PDE, 'y0') 
+    re.PDE.y0 = NaN(re.PDE.xmax*re.PDE.ymax*length(re.yLabel),1);
+end
 if ~exist('idY0','var')
     for i=1:length(re.yLabel)
-        reSetY0(i);
-    end
-    re.PDE.y0 = NaN(re.PDE.xmax*re.PDE.ymax*length(re.yLabel),1);
-    for i = 1:length(re.Y0opt)
-       re.PDE.y0(re.PDE.ctr+i-1,1) = re.Y0opt(i).Y0; 
+        reSetY0(i);f
     end
     return
 end
@@ -83,6 +82,4 @@ switch kind
 end
 
 re.Y0opt(idY0).Y0 = Y0(:);
-
-
-
+re.PDE.y0(re.PDE.ctr+idY0-1,1) = Y0(:); 
