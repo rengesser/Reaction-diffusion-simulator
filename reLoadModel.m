@@ -56,9 +56,49 @@ for i = 1:length(eq)
     helperCheckReservedWords(symvar(eq{i}),states{i});    
 end
 % % PARAMETERFIELDS (space dependent parameters, denoted with px)
-str=textscan(fid,'%s','commentStyle','//');
-parafields=str{:};
+str=textscan(fid,'%s',1,'commentStyle','//');
+parafields={};
+while(~strcmp(str{1},'INITS') && (~strcmp(str{1},'DERIVED')))
+    parafields=str{:};
+    str=textscan(fid,'%s',1,'commentStyle','//');
+end
 
+%%% DERIVED
+re.z = {};
+re.fz = {};
+str=textscan(fid,'%s',1,'commentStyle','//');
+while(~strcmp(str{1},'INITS'))
+    re.z(end+1) = str{1};
+    str=textscan(fid,'%s',1,'commentStyle','//');
+    re.fz(end+1) = str{1};
+    str=textscan(fid,'%s',1,'commentStyle','//');
+    while ~any(regexp(str{1}{:},'"$'))
+        re.fz{end} = [re.fz{end} str{1}{:}];
+        str=textscan(fid,'%s',1,'commentStyle','//');
+    end
+    if ~strcmp(str{1}{:},'"')
+        re.fz{end} = [re.fz{end} str{1}{:}];
+        str=textscan(fid,'%s',1,'commentStyle','//');
+    end
+end
+
+%%INITS  // name kind c x0(1) x0(2) sigma
+re.Y0opt = struct('names',{},'idkind',[],'c',[],'x0',[],'sigma',[]);
+str=textscan(fid,'%s%f%f%f%f%f','commentStyle','//');
+if ~isempty(str)
+    for i=1:size(str{1},1)
+        re.Y0opt(i).names = str{1}{i};
+        re.Y0opt(i).idkind=str{2}(i);
+        re.Y0opt(i).c=str{3}(i);
+        re.Y0opt(i).x0=str{4}(i);
+        re.Y0opt(i).x0(2)=str{5}(i);
+        re.Y0opt(i).sigma=str{6}(i);
+    end
+    re.Y0opt(1).kinds = ['xstep', 'circle', '2dgaussian', '1dgaussian', 'xrange', 'constant','random'];
+end
+if length(re.Y0opt)~=nstates
+    warning('reLoadModel: Not all inits set in def file.')
+end
 % 
 eqSymbolic  = arSym(eq);
 variables=symvar(eqSymbolic);
