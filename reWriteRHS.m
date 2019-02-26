@@ -63,11 +63,12 @@ for ii = 1:nStates
         idif = idif +1;
     end
     eq_fkt{ii}  = ['dydt' replace1 '=(' eq_fkt{ii} ')' replace2 ];
+    eq_fkt{ii} = [eq_fkt{ii},'; % ',re.yLabel{ii}];
 end
 
-tmp  = sprintf('%s;\n',eq_fkt{:});
+tmp  = sprintf('%s\n',eq_fkt{:});
 
-filename = ['RHS_PDE_' datestr(now,'yyyymmddHHMMSSFFF') '.m'];
+filename = ['RHS_PDE_' datestr(now,'yyyymmdd_HHMM_SSFFF') '.m'];
 
 if ~exist(fullfile(pwd, 'RHS_fcts'),'dir')
    mkdir('RHS_fcts') 

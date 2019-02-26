@@ -1,4 +1,4 @@
-function D = cmd(ymax,xmax,ysten,xsten,bflag,cflag)
+function D = cm(ymax,xmax,ysten,xsten,bflag,cflag)
 % Low-level function for the construction of a sparse coupling matrix 
 %
 % D = CM(YMAX,XMAX,YSTEN,XSTEN,BFLAG,CFLAG), returns a sparse 
