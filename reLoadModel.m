@@ -70,6 +70,7 @@ end
 re.z = {};
 re.fz = {};
 str=textscan(fid,'%s',1,'commentStyle','//');
+
 while(~strcmp(str{1},'INITS'))
     re.z(end+1) = str{1};
     str=textscan(fid,'%s',1,'commentStyle','//');
@@ -87,6 +88,16 @@ end
 
 %%INITS  // name kind c x0(1) x0(2) sigma
 re.Y0opt = struct('names',{},'idkind',[],'c',[],'x0',[],'sigma',[]);
+
+% Set default values
+for ids=1:nstates
+    re.Y0opt(ids).kinds = {'xstep', 'circle', '2dgaussian', '1dgaussian', 'xrange', 'constant','random'};
+    re.Y0opt(ids).idkind = 6;
+    re.Y0opt(ids).x0 = [0.05 0.5];
+    re.Y0opt(ids).sigma = 0.05;
+    re.Y0opt(ids).c = 1;
+end
+
 str=textscan(fid,'%s%f%f%f%f%f','commentStyle','//');
 if ~isempty(str)
     for i=1:size(str{1},1)
@@ -97,7 +108,6 @@ if ~isempty(str)
         re.Y0opt(i).x0(2)=str{5}(i);
         re.Y0opt(i).sigma=str{6}(i);
     end
-    re.Y0opt(1).kinds = ['xstep', 'circle', '2dgaussian', '1dgaussian', 'xrange', 'constant','random'];
 end
 if length(re.Y0opt)~=nstates
     warning('reLoadModel: Not all inits set in def file.')
@@ -152,4 +162,6 @@ re.D = diag(sym(dd));  % Diffusion matrix
 % paras / p   : p1 ... pn
 % paras_x / px : px1 ... pxn
 re.uLabel = {};
-re.pFromAr = 0;
+re.pFromAr = 0;  % Is the model assembled from a Data2dynamics model
+
+re.ar.qParameterized_initials = 0;  % when exporting the model to a D2D model file: Use a parameterized initial function
