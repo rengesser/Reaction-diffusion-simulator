@@ -19,7 +19,7 @@ if ~isfield(re.PDE, 'y0')
 end
 if ~exist('idY0','var')
     for i=1:length(re.yLabel)
-        reSetY0(i);f
+        reSetY0(i);
     end
     return
 end
