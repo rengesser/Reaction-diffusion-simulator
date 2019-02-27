@@ -76,9 +76,18 @@ switch kind
         % step: x<x0 =1, x>x0 = zero
         Y0 = c * (x<x0(1));
     case '1dgaussian'
-        Y0 = c * exp( - ((x-x0(1)).^2)/2/sigma^2 );
+        if c>=0
+            Y0 = c * exp( - ((x-x0(1)).^2)/2/sigma^2 );
+        else
+            Y0 =  c * exp( - ((x-x0(1)).^2)/2/sigma^2 );  % invert gaussian, outside high, inside low
+            Y0 = Y0 - max(Y0) -c;
+        end
     case 'xrange'
-        Y0 = c * (x>x0(1) & x<x0(2));
+        if sigma~=1
+            Y0 = c * (x>x0(1) & x<x0(2));
+        else
+            Y0 = c * (x<x0(1) | x>x0(2));                 % if sigma=1, xrange at start/end
+        end
 end
 
 re.Y0opt(idY0).Y0 = Y0(:);
