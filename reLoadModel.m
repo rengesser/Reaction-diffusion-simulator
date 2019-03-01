@@ -135,9 +135,14 @@ if length(pxLabel) ~= length(parafields)
     warning(sprintf('\nThe parameterfield "%s" is not used in the model equations!',parafields{id_notdefined}))
 end
 
-dSym = symvar(sym(dd));
+dSym = sym(dd);
+dcount = 0;
 for i=1:length(dSym)
-    dLabel{i} = char(dSym(i));
+    dstr = char(dSym(i));
+    if ~strcmp(dstr,'0')
+        dcount = dcount + 1;
+        dLabel{dcount} = dstr;
+    end
 end
 
 inter = intersect(pLabel, dLabel);
