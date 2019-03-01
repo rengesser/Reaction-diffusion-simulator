@@ -80,6 +80,7 @@ end
 % open the file with write permission
 fid = fopen(['RHS_fcts/' filename], 'w');
 fprintf(fid, '%s\n' ,'function dydt = RHS_PDE(t,y)');
+fprintf(fid, '\n');
 fprintf(fid, '%s\n' , 'global re;');
 fprintf(fid, '%s\n' , 'p=re.p;');
 fprintf(fid, '%s\n' , 'px=re.px;');
@@ -87,9 +88,12 @@ fprintf(fid, '%s\n' , 'u=re.u;');
 fprintf(fid, '%s\n' , 'D=re.PDE.D;');
 fprintf(fid, '%s\n' , 'd=re.d;');
 fprintf(fid, '%s\n' , 'ctr=re.PDE.ctr;');
+fprintf(fid, '%s\n' , 'if strcmp(re.PDE.bndcondition,''dirichlet'')');
+fprintf(fid, '    %s\n' , 'y(re.PDE.idsBoundary,:) = re.PDE.yBoundary;');
+fprintf(fid, '%s\n' , 'end');
 fprintf(fid, '%s\n' ,'dydt = zeros(size(y));');
 fprintf(fid, '%s\n' ,tmp);
-fprintf(fid, '%s\n' ,'end');
+
 fclose(fid);
 re.PDE.RHS_fct = str2func(filename(1:end-2));
 rehash

@@ -107,11 +107,11 @@ for idT = idsTimes
         switch kindofplot
             case '2dim'
                 imagesc(reshape(Y(idT,:,idplot),re.PDE.xmax,re.PDE.ymax)')
-                labelx = 'x';
-                labely = 'y';
+                labelx = 'y';
+                labely = 'x';
                 timestr = [': T=' num2str(re.PDE.t(idT))];
             case '1dim_spacetime'
-                imagesc(Y(:,:,idplot)')
+                imagesc(re.PDE.t,1:re.PDE.xmax,Y(:,:,idplot)')
                 labelx = 'time';
                 labely = 'space';
             case '1dim'

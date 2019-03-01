@@ -12,6 +12,11 @@ dx = 1/(max(re.PDE.xmax,re.PDE.ymax)-1);
 % boundary condition of the line/grid
 re.PDE.bndcondition = 'zeroflux'; 
 %re.PDE.bndcondition = 'periodic'; 
+%re.PDE.bndcondition = 'dirichlet'; 
+
+if strcmp(re.PDE.bndcondition,'dirichlet')
+    reSetDirichletBndCnd;
+end
 
 % initialize grid indices
 re.PDE.ctr = IJKth(1,1:re.PDE.ymax,1:re.PDE.xmax,re.PDE.ymax,length(re.yLabel));
@@ -24,7 +29,7 @@ else
 end
 
 % Set integration options including structure of the jacobian
-if ~isempty(re.pxLabel)
+if ~isempty(re.pxLabel) || strcmp(re.PDE.bndcondition,'dirichlet')
    boolVectorized = 'off';
 else
    boolVectorized = 'on';
@@ -61,3 +66,38 @@ re.plot.ts = 0:0.05:1;  % indices, absolute or relative timepoints of plotting; 
 re.plot.qTimes = 'rel';  %'ids', 'abs', 'rel' (between 0 and 1)
 
 re.plot.px = 1; % plot parafields
+
+% Properties of Dirichlet boundary conditions
+for idy = 1:length(re.yLabel)
+    re.PDE.BndCndOpts(idy).kind = 'constant'; % constant values used at the borders
+    % re.PDE.BndCndOpts(idy).kind = 'custom'; % if you want to specify
+    % custom function at the the boundary 
+  
+    % constant values used when re.PDE.BndCndOpts(idy).kind = 'constant'.
+    % When set to NaN, zeroflux conditions are used.
+    re.PDE.BndCndOpts(idy).c_x1 = NaN;     
+    re.PDE.BndCndOpts(idy).c_xend = NaN;
+    re.PDE.BndCndOpts(idy).c_y1 = NaN;
+    re.PDE.BndCndOpts(idy).c_yend = NaN;
+end
+
+% Extract indices of the boundary
+for idy = 1:length(re.yLabel)
+    if re.PDE.ymax == 1 % 1 dim
+        re.PDE.BndCndOpts(idy).idsBoundary_clockwise = [re.PDE.ctr(1) re.PDE.ctr(end)] + idy - 1;
+        re.PDE.BndCndOpts(idy).ids_x1 = re.PDE.ctr(1);
+        re.PDE.BndCndOpts(idy).ids_xend = re.PDE.ctr(end);
+    else % 2 dim
+        ctr = reshape(re.PDE.ctr + idy -1, re.PDE.xmax, re.PDE.ymax);
+        
+        idsBoundary_clockwise = unique([ctr(:,1)'  ctr(end,:) ctr(end:-1:1,end)' ctr(1,end:-1:1)  ], 'stable');
+        
+        re.PDE.BndCndOpts(idy).ids_x1 = ctr(1,:);
+        re.PDE.BndCndOpts(idy).ids_xend = ctr(end,end:-1:1);
+        re.PDE.BndCndOpts(idy).ids_y1 = ctr(end:-1:1,1)';
+        re.PDE.BndCndOpts(idy).ids_yend = ctr(:,end)';
+        
+        re.PDE.BndCndOpts(idy).idsBoundary_clockwise = idsBoundary_clockwise;
+    end
+    re.PDE.BndCndOpts(idy).yBoundary = NaN(size(re.PDE.BndCndOpts(idy).idsBoundary_clockwise));
+end

@@ -23,7 +23,7 @@ if nargin == 2
   xmax = 1;
   xsten = [0 0];
   bndcondition = varargin{2};
-  if strcmp(bndcondition,'zeroflux')
+  if strcmp(bndcondition,'zeroflux') || strcmp(bndcondition,'dirichlet')
     bflag = 1;
   elseif strcmp(bndcondition,'periodic')
     bflag = 0;

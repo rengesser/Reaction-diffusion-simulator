@@ -1,3 +1,8 @@
+% Converts existing ar-struct from the Data2Dynamcs framework to a re struct for
+% simulating as PDE.
+%
+% Not tested, use with care.
+
 function arToPDE(idm)
 global ar
 clear -global re
