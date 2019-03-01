@@ -14,10 +14,6 @@ re.PDE.bndcondition = 'zeroflux';
 %re.PDE.bndcondition = 'periodic'; 
 %re.PDE.bndcondition = 'dirichlet'; 
 
-if strcmp(re.PDE.bndcondition,'dirichlet')
-    reSetDirichletBndCnd;
-end
-
 % initialize grid indices
 re.PDE.ctr = IJKth(1,1:re.PDE.ymax,1:re.PDE.xmax,re.PDE.ymax,length(re.yLabel));
 
@@ -66,6 +62,10 @@ re.plot.ts = 0:0.05:1;  % indices, absolute or relative timepoints of plotting; 
 re.plot.qTimes = 'rel';  %'ids', 'abs', 'rel' (between 0 and 1)
 
 re.plot.px = 1; % plot parafields
+
+if strcmp(re.PDE.bndcondition,'dirichlet')
+    reSetDirichletBndCnd;
+end
 
 % Properties of Dirichlet boundary conditions
 for idy = 1:length(re.yLabel)
