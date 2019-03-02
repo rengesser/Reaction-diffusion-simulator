@@ -8,7 +8,7 @@ reLoadModel('GiererMeinhardt.def')
 reInitialize
 reWriteRHS
 
-% Simulation on 1dim grid with 200 grid points
+% Simulation on 2dim grid with 50x50 grid points
 re.PDE.xmax = 50;
 re.PDE.ymax = 50;
 reAdaptGridsize;

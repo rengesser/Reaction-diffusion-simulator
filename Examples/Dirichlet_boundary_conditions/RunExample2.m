@@ -8,7 +8,7 @@ reLoadModel('Diffusion_from_source_bnd.def')
 reInitialize
 reWriteRHS
 
-% Simulation on 1dim grid with 200 grid points
+% Simulation on 2dim grid with 50x50 grid points
 re.PDE.xmax = 50;
 re.PDE.ymax = 50;
 reAdaptGridsize;
@@ -18,8 +18,8 @@ re.d(1)=0.01;
 reSetPars('Km_grad',1)
 re.PDE.bndcondition='dirichlet';
 
-% Species 1: Boundary values for Species 1 a function (2 examples: line 23 sinus
-% function, line 24 linear function)
+% Species 1: Boundary values for Species 1 a function (2 examples: line 24 sinus
+% function, line 25 linear function)
 re.PDE.idsBoundary=re.PDE.BndCndOpts(1).idsBoundary_clockwise;
 re.PDE.yBoundary = 2+sin(24*pi*linspace(0,1,length(re.PDE.BndCndOpts(1).idsBoundary_clockwise)));
 %re.PDE.yBoundary = 0.5+2*linspace(0,1,length(re.PDE.BndCndOpts(2).idsBoundary_clockwise));
