@@ -60,12 +60,9 @@ reSetPx % properties saved in re.pxOpt; see reSetPx.m for details
 re.plot.timespace_1d = 0; % =1: plot heatmap with concentration over time and space, only used in 1dim space
 re.plot.ts = 0:0.05:1;  % indices, absolute or relative timepoints of plotting; if length(re.plot.idt)>1, all are plotted with pause. Use '+inf' for last timepoint
 re.plot.qTimes = 'rel';  %'ids', 'abs', 'rel' (between 0 and 1)
-
 re.plot.px = 1; % plot parafields
+re.plot.global_clims = 0; % 2dim: Use same colorscale for all timepoints 
 
-if strcmp(re.PDE.bndcondition,'dirichlet')
-    reSetDirichletBndCnd;
-end
 
 % Properties of Dirichlet boundary conditions
 for idy = 1:length(re.yLabel)
@@ -100,4 +97,8 @@ for idy = 1:length(re.yLabel)
         re.PDE.BndCndOpts(idy).idsBoundary_clockwise = idsBoundary_clockwise;
     end
     re.PDE.BndCndOpts(idy).yBoundary = NaN(size(re.PDE.BndCndOpts(idy).idsBoundary_clockwise));
+end
+
+if strcmp(re.PDE.bndcondition,'dirichlet')
+    reSetDirichletBndCnd;
 end

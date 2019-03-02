@@ -30,6 +30,11 @@ if ~exist('name','var')
     name = '';
 end
 
+% For backwards compability. 
+if ~isfield(re.plot, 'global_clims')
+    re.plot.global_clims = 0; % 2dim: Use same colorscale for all timepoints 
+end
+
 if resimulate
     %disp('Simulating system...')
     reSimuPDESys;
@@ -106,7 +111,12 @@ for idT = idsTimes
         subplot(nrows,ncols,idplot)
         switch kindofplot
             case '2dim'
-                imagesc(reshape(Y(idT,:,idplot),re.PDE.xmax,re.PDE.ymax)')
+                if re.plot.global_clims
+                    clims = [min(min(Y(:,:,idplot))) max(max(Y(:,:,idplot)))];
+                else
+                    clims = [-inf inf];
+                end
+                imagesc(reshape(Y(idT,:,idplot),re.PDE.xmax,re.PDE.ymax)',clims)
                 labelx = 'y';
                 labely = 'x';
                 timestr = [': T=' num2str(re.PDE.t(idT))];
