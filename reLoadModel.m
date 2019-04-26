@@ -69,23 +69,12 @@ if ~isempty(str{1})
 end
 
 %%% DERIVED
-re.z = {};
-re.fz = {};
+z = {};
 str=textscan(fid,'%s',1,'commentStyle','//');
 
 while(~strcmp(str{1},'INITS'))
-    re.z(end+1) = str{1};
+    z(end+1) = str{1};
     str=textscan(fid,'%s',1,'commentStyle','//');
-    re.fz(end+1) = str{1};
-    str=textscan(fid,'%s',1,'commentStyle','//');
-    while ~any(regexp(str{1}{:},'"$'))
-        re.fz{end} = [re.fz{end} str{1}{:}];
-        str=textscan(fid,'%s',1,'commentStyle','//');
-    end
-    if ~strcmp(str{1}{:},'"')
-        re.fz{end} = [re.fz{end} str{1}{:}];
-        str=textscan(fid,'%s',1,'commentStyle','//');
-    end
 end
 
 %%INITS  // name kind c x0(1) x0(2) sigma
@@ -114,7 +103,7 @@ end
 if length(re.Y0opt)~=nstates
     warning('reLoadModel: Not all inits set in def file.')
 end
-% 
+ 
 eqSymbolic  = arSym(eq);
 variables=symvar(eqSymbolic);
 
@@ -156,6 +145,8 @@ re.eqSymbolic = eqSymbolic;
 
 re.yLabel = states;
 re.ySymbolic = sym(states,'clear');
+
+re.z = z;
 
 re.pLabel = pLabel;
 re.pSymbolic =pLabel;
