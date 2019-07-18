@@ -43,10 +43,14 @@ re.ar.px = re.px; % todo: something similar to the initials, see below
 for idy = 1:length(re.yLabel)
     for idspace = 1:length(re.PDE.ctr)
         eqSym1 = subs(eqSym(idy),  re.yLabel, states_strings(:,idspace)');
-        for idpx = 1:length(re.pxOpt)
-            eqSym2 = subs(eqSym1, re.pxLabel{idpx}, arSym(re.ar.px(idspace,idpx))); % todo, substitue parameterized function for px
+        if isfield(re,'pxOpt')
+            for idpx = 1:length(re.pxOpt)
+                eqSym2 = subs(eqSym1, re.pxLabel{idpx}, arSym(re.ar.px(idspace,idpx))); % todo, substitue parameterized function for px
+            end
+            eq_str = char(eqSym2);
+        else
+            eq_str = char(eqSym1);
         end
-        eq_str = char(eqSym2);
         diff_str = '';
         if ~logical(re.D(idy,idy)==0)
             for idcm = 1:length(re.PDE.ctr)
