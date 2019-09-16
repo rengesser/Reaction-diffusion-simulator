@@ -1,0 +1,489 @@
+DESCRIPTION
+"Exported model from JanineODE.def."
+"13-Sep-2019 21:00:22"
+
+PREDICTOR
+t  T  h  time 10.000000 100.000000 
+
+COMPARTMENTS
+
+STATES
+Hh_0001  C  au  conc.  0
+Hh_0002  C  au  conc.  0
+Hh_0003  C  au  conc.  0
+Hh_0004  C  au  conc.  0
+Hh_0005  C  au  conc.  0
+Hh_0006  C  au  conc.  0
+Hh_0007  C  au  conc.  0
+Hh_0008  C  au  conc.  0
+Hh_0009  C  au  conc.  0
+Hh_0010  C  au  conc.  0
+Ptc_0001  C  au  conc.  0
+Ptc_0002  C  au  conc.  0
+Ptc_0003  C  au  conc.  0
+Ptc_0004  C  au  conc.  0
+Ptc_0005  C  au  conc.  0
+Ptc_0006  C  au  conc.  0
+Ptc_0007  C  au  conc.  0
+Ptc_0008  C  au  conc.  0
+Ptc_0009  C  au  conc.  0
+Ptc_0010  C  au  conc.  0
+HP_0001  C  au  conc.  0
+HP_0002  C  au  conc.  0
+HP_0003  C  au  conc.  0
+HP_0004  C  au  conc.  0
+HP_0005  C  au  conc.  0
+HP_0006  C  au  conc.  0
+HP_0007  C  au  conc.  0
+HP_0008  C  au  conc.  0
+HP_0009  C  au  conc.  0
+HP_0010  C  au  conc.  0
+pSmo_0001  C  au  conc.  0
+pSmo_0002  C  au  conc.  0
+pSmo_0003  C  au  conc.  0
+pSmo_0004  C  au  conc.  0
+pSmo_0005  C  au  conc.  0
+pSmo_0006  C  au  conc.  0
+pSmo_0007  C  au  conc.  0
+pSmo_0008  C  au  conc.  0
+pSmo_0009  C  au  conc.  0
+pSmo_0010  C  au  conc.  0
+Dpp_0001  C  au  conc.  0
+Dpp_0002  C  au  conc.  0
+Dpp_0003  C  au  conc.  0
+Dpp_0004  C  au  conc.  0
+Dpp_0005  C  au  conc.  0
+Dpp_0006  C  au  conc.  0
+Dpp_0007  C  au  conc.  0
+Dpp_0008  C  au  conc.  0
+Dpp_0009  C  au  conc.  0
+Dpp_0010  C  au  conc.  0
+DTL_0001  C  au  conc.  0
+DTL_0002  C  au  conc.  0
+DTL_0003  C  au  conc.  0
+DTL_0004  C  au  conc.  0
+DTL_0005  C  au  conc.  0
+DTL_0006  C  au  conc.  0
+DTL_0007  C  au  conc.  0
+DTL_0008  C  au  conc.  0
+DTL_0009  C  au  conc.  0
+DTL_0010  C  au  conc.  0
+DTM_0001  C  au  conc.  0
+DTM_0002  C  au  conc.  0
+DTM_0003  C  au  conc.  0
+DTM_0004  C  au  conc.  0
+DTM_0005  C  au  conc.  0
+DTM_0006  C  au  conc.  0
+DTM_0007  C  au  conc.  0
+DTM_0008  C  au  conc.  0
+DTM_0009  C  au  conc.  0
+DTM_0010  C  au  conc.  0
+pMad_0001  C  au  conc.  0
+pMad_0002  C  au  conc.  0
+pMad_0003  C  au  conc.  0
+pMad_0004  C  au  conc.  0
+pMad_0005  C  au  conc.  0
+pMad_0006  C  au  conc.  0
+pMad_0007  C  au  conc.  0
+pMad_0008  C  au  conc.  0
+pMad_0009  C  au  conc.  0
+pMad_0010  C  au  conc.  0
+omb_0001  C  au  conc.  0
+omb_0002  C  au  conc.  0
+omb_0003  C  au  conc.  0
+omb_0004  C  au  conc.  0
+omb_0005  C  au  conc.  0
+omb_0006  C  au  conc.  0
+omb_0007  C  au  conc.  0
+omb_0008  C  au  conc.  0
+omb_0009  C  au  conc.  0
+omb_0010  C  au  conc.  0
+brk_0001  C  au  conc.  0
+brk_0002  C  au  conc.  0
+brk_0003  C  au  conc.  0
+brk_0004  C  au  conc.  0
+brk_0005  C  au  conc.  0
+brk_0006  C  au  conc.  0
+brk_0007  C  au  conc.  0
+brk_0008  C  au  conc.  0
+brk_0009  C  au  conc.  0
+brk_0010  C  au  conc.  0
+sal_0001  C  au  conc.  0
+sal_0002  C  au  conc.  0
+sal_0003  C  au  conc.  0
+sal_0004  C  au  conc.  0
+sal_0005  C  au  conc.  0
+sal_0006  C  au  conc.  0
+sal_0007  C  au  conc.  0
+sal_0008  C  au  conc.  0
+sal_0009  C  au  conc.  0
+sal_0010  C  au  conc.  0
+dad_0001  C  au  conc.  0
+dad_0002  C  au  conc.  0
+dad_0003  C  au  conc.  0
+dad_0004  C  au  conc.  0
+dad_0005  C  au  conc.  0
+dad_0006  C  au  conc.  0
+dad_0007  C  au  conc.  0
+dad_0008  C  au  conc.  0
+dad_0009  C  au  conc.  0
+dad_0010  C  au  conc.  0
+mtv_0001  C  au  conc.  0
+mtv_0002  C  au  conc.  0
+mtv_0003  C  au  conc.  0
+mtv_0004  C  au  conc.  0
+mtv_0005  C  au  conc.  0
+mtv_0006  C  au  conc.  0
+mtv_0007  C  au  conc.  0
+mtv_0008  C  au  conc.  0
+mtv_0009  C  au  conc.  0
+mtv_0010  C  au  conc.  0
+TkvL_0001  C  au  conc.  0
+TkvL_0002  C  au  conc.  0
+TkvL_0003  C  au  conc.  0
+TkvL_0004  C  au  conc.  0
+TkvL_0005  C  au  conc.  0
+TkvL_0006  C  au  conc.  0
+TkvL_0007  C  au  conc.  0
+TkvL_0008  C  au  conc.  0
+TkvL_0009  C  au  conc.  0
+TkvL_0010  C  au  conc.  0
+TkvM_0001  C  au  conc.  0
+TkvM_0002  C  au  conc.  0
+TkvM_0003  C  au  conc.  0
+TkvM_0004  C  au  conc.  0
+TkvM_0005  C  au  conc.  0
+TkvM_0006  C  au  conc.  0
+TkvM_0007  C  au  conc.  0
+TkvM_0008  C  au  conc.  0
+TkvM_0009  C  au  conc.  0
+TkvM_0010  C  au  conc.  0
+
+INPUTS
+
+ODES
+"En_anterior*a_hh - Hh_0001*b_hh + HP_0001*k2_hp - Hh_0001*Ptc_0001*k_hp+d_Hh*(+(-81)*Hh_0001+(81)*Hh_0002)"
+"En_anterior*a_hh - Hh_0002*b_hh + HP_0002*k2_hp - Hh_0002*Ptc_0002*k_hp+d_Hh*(+(81)*Hh_0001+(-162)*Hh_0002+(81)*Hh_0003)"
+"En_anterior*a_hh - Hh_0003*b_hh + HP_0003*k2_hp - Hh_0003*Ptc_0003*k_hp+d_Hh*(+(81)*Hh_0002+(-162)*Hh_0003+(81)*Hh_0004)"
+"En_anterior*a_hh - Hh_0004*b_hh + HP_0004*k2_hp - Hh_0004*Ptc_0004*k_hp+d_Hh*(+(81)*Hh_0003+(-162)*Hh_0004+(81)*Hh_0005)"
+"En_anterior*a_hh - Hh_0005*b_hh + HP_0005*k2_hp - Hh_0005*Ptc_0005*k_hp+d_Hh*(+(81)*Hh_0004+(-162)*Hh_0005+(81)*Hh_0006)"
+"En_posterior*a_hh - Hh_0006*b_hh + HP_0006*k2_hp - Hh_0006*Ptc_0006*k_hp+d_Hh*(+(81)*Hh_0005+(-162)*Hh_0006+(81)*Hh_0007)"
+"En_posterior*a_hh - Hh_0007*b_hh + HP_0007*k2_hp - Hh_0007*Ptc_0007*k_hp+d_Hh*(+(81)*Hh_0006+(-162)*Hh_0007+(81)*Hh_0008)"
+"En_posterior*a_hh - Hh_0008*b_hh + HP_0008*k2_hp - Hh_0008*Ptc_0008*k_hp+d_Hh*(+(81)*Hh_0007+(-162)*Hh_0008+(81)*Hh_0009)"
+"En_posterior*a_hh - Hh_0009*b_hh + HP_0009*k2_hp - Hh_0009*Ptc_0009*k_hp+d_Hh*(+(81)*Hh_0008+(-162)*Hh_0009+(81)*Hh_0010)"
+"En_posterior*a_hh - Hh_0010*b_hh + HP_0010*k2_hp - Hh_0010*Ptc_0010*k_hp+d_Hh*(+(81)*Hh_0009+(-81)*Hh_0010)"
+"(a_psmoptc*pSmo_0001^p)/(M_ptc^p + pSmo_0001^p) - a_ptc*(En_anterior - 1) - Ptc_0001*b_ptc - Hh_0001*Ptc_0001*k_hp"
+"(a_psmoptc*pSmo_0002^p)/(M_ptc^p + pSmo_0002^p) - a_ptc*(En_anterior - 1) - Ptc_0002*b_ptc - Hh_0002*Ptc_0002*k_hp"
+"(a_psmoptc*pSmo_0003^p)/(M_ptc^p + pSmo_0003^p) - a_ptc*(En_anterior - 1) - Ptc_0003*b_ptc - Hh_0003*Ptc_0003*k_hp"
+"(a_psmoptc*pSmo_0004^p)/(M_ptc^p + pSmo_0004^p) - a_ptc*(En_anterior - 1) - Ptc_0004*b_ptc - Hh_0004*Ptc_0004*k_hp"
+"(a_psmoptc*pSmo_0005^p)/(M_ptc^p + pSmo_0005^p) - a_ptc*(En_anterior - 1) - Ptc_0005*b_ptc - Hh_0005*Ptc_0005*k_hp"
+"(a_psmoptc*pSmo_0006^p)/(M_ptc^p + pSmo_0006^p) - a_ptc*(En_posterior - 1) - Ptc_0006*b_ptc - Hh_0006*Ptc_0006*k_hp"
+"(a_psmoptc*pSmo_0007^p)/(M_ptc^p + pSmo_0007^p) - a_ptc*(En_posterior - 1) - Ptc_0007*b_ptc - Hh_0007*Ptc_0007*k_hp"
+"(a_psmoptc*pSmo_0008^p)/(M_ptc^p + pSmo_0008^p) - a_ptc*(En_posterior - 1) - Ptc_0008*b_ptc - Hh_0008*Ptc_0008*k_hp"
+"(a_psmoptc*pSmo_0009^p)/(M_ptc^p + pSmo_0009^p) - a_ptc*(En_posterior - 1) - Ptc_0009*b_ptc - Hh_0009*Ptc_0009*k_hp"
+"(a_psmoptc*pSmo_0010^p)/(M_ptc^p + pSmo_0010^p) - a_ptc*(En_posterior - 1) - Ptc_0010*b_ptc - Hh_0010*Ptc_0010*k_hp"
+"Hh_0001*Ptc_0001*k_hp - HP_0001*k2_hp - HP_0001*b_hp"
+"Hh_0002*Ptc_0002*k_hp - HP_0002*k2_hp - HP_0002*b_hp"
+"Hh_0003*Ptc_0003*k_hp - HP_0003*k2_hp - HP_0003*b_hp"
+"Hh_0004*Ptc_0004*k_hp - HP_0004*k2_hp - HP_0004*b_hp"
+"Hh_0005*Ptc_0005*k_hp - HP_0005*k2_hp - HP_0005*b_hp"
+"Hh_0006*Ptc_0006*k_hp - HP_0006*k2_hp - HP_0006*b_hp"
+"Hh_0007*Ptc_0007*k_hp - HP_0007*k2_hp - HP_0007*b_hp"
+"Hh_0008*Ptc_0008*k_hp - HP_0008*k2_hp - HP_0008*b_hp"
+"Hh_0009*Ptc_0009*k_hp - HP_0009*k2_hp - HP_0009*b_hp"
+"Hh_0010*Ptc_0010*k_hp - HP_0010*k2_hp - HP_0010*b_hp"
+"- b_psmo*pSmo_0001 - (a_psmo*(HP_0001/Ptc_0001)^s*(En_anterior - 1))/(M_psmo^s + (HP_0001/Ptc_0001)^s)"
+"- b_psmo*pSmo_0002 - (a_psmo*(HP_0002/Ptc_0002)^s*(En_anterior - 1))/(M_psmo^s + (HP_0002/Ptc_0002)^s)"
+"- b_psmo*pSmo_0003 - (a_psmo*(HP_0003/Ptc_0003)^s*(En_anterior - 1))/(M_psmo^s + (HP_0003/Ptc_0003)^s)"
+"- b_psmo*pSmo_0004 - (a_psmo*(HP_0004/Ptc_0004)^s*(En_anterior - 1))/(M_psmo^s + (HP_0004/Ptc_0004)^s)"
+"- b_psmo*pSmo_0005 - (a_psmo*(HP_0005/Ptc_0005)^s*(En_anterior - 1))/(M_psmo^s + (HP_0005/Ptc_0005)^s)"
+"- b_psmo*pSmo_0006 - (a_psmo*(HP_0006/Ptc_0006)^s*(En_posterior - 1))/(M_psmo^s + (HP_0006/Ptc_0006)^s)"
+"- b_psmo*pSmo_0007 - (a_psmo*(HP_0007/Ptc_0007)^s*(En_posterior - 1))/(M_psmo^s + (HP_0007/Ptc_0007)^s)"
+"- b_psmo*pSmo_0008 - (a_psmo*(HP_0008/Ptc_0008)^s*(En_posterior - 1))/(M_psmo^s + (HP_0008/Ptc_0008)^s)"
+"- b_psmo*pSmo_0009 - (a_psmo*(HP_0009/Ptc_0009)^s*(En_posterior - 1))/(M_psmo^s + (HP_0009/Ptc_0009)^s)"
+"- b_psmo*pSmo_0010 - (a_psmo*(HP_0010/Ptc_0010)^s*(En_posterior - 1))/(M_psmo^s + (HP_0010/Ptc_0010)^s)"
+"k2_dt*(DTL_0001 + DTM_0001) - Dpp_0001*b_dpp - Dpp_0001*k_dt*(TkvL_0001 + TkvM_0001) + (a_dpp*pSmo_0001^d)/(M_dpp^d + pSmo_0001^d)+d_Dpp*(+(-81)*Dpp_0001+(81)*Dpp_0002)"
+"k2_dt*(DTL_0002 + DTM_0002) - Dpp_0002*b_dpp - Dpp_0002*k_dt*(TkvL_0002 + TkvM_0002) + (a_dpp*pSmo_0002^d)/(M_dpp^d + pSmo_0002^d)+d_Dpp*(+(81)*Dpp_0001+(-162)*Dpp_0002+(81)*Dpp_0003)"
+"k2_dt*(DTL_0003 + DTM_0003) - Dpp_0003*b_dpp - Dpp_0003*k_dt*(TkvL_0003 + TkvM_0003) + (a_dpp*pSmo_0003^d)/(M_dpp^d + pSmo_0003^d)+d_Dpp*(+(81)*Dpp_0002+(-162)*Dpp_0003+(81)*Dpp_0004)"
+"k2_dt*(DTL_0004 + DTM_0004) - Dpp_0004*b_dpp - Dpp_0004*k_dt*(TkvL_0004 + TkvM_0004) + (a_dpp*pSmo_0004^d)/(M_dpp^d + pSmo_0004^d)+d_Dpp*(+(81)*Dpp_0003+(-162)*Dpp_0004+(81)*Dpp_0005)"
+"k2_dt*(DTL_0005 + DTM_0005) - Dpp_0005*b_dpp - Dpp_0005*k_dt*(TkvL_0005 + TkvM_0005) + (a_dpp*pSmo_0005^d)/(M_dpp^d + pSmo_0005^d)+d_Dpp*(+(81)*Dpp_0004+(-162)*Dpp_0005+(81)*Dpp_0006)"
+"k2_dt*(DTL_0006 + DTM_0006) - Dpp_0006*b_dpp - Dpp_0006*k_dt*(TkvL_0006 + TkvM_0006) + (a_dpp*pSmo_0006^d)/(M_dpp^d + pSmo_0006^d)+d_Dpp*(+(81)*Dpp_0005+(-162)*Dpp_0006+(81)*Dpp_0007)"
+"k2_dt*(DTL_0007 + DTM_0007) - Dpp_0007*b_dpp - Dpp_0007*k_dt*(TkvL_0007 + TkvM_0007) + (a_dpp*pSmo_0007^d)/(M_dpp^d + pSmo_0007^d)+d_Dpp*(+(81)*Dpp_0006+(-162)*Dpp_0007+(81)*Dpp_0008)"
+"k2_dt*(DTL_0008 + DTM_0008) - Dpp_0008*b_dpp - Dpp_0008*k_dt*(TkvL_0008 + TkvM_0008) + (a_dpp*pSmo_0008^d)/(M_dpp^d + pSmo_0008^d)+d_Dpp*(+(81)*Dpp_0007+(-162)*Dpp_0008+(81)*Dpp_0009)"
+"k2_dt*(DTL_0009 + DTM_0009) - Dpp_0009*b_dpp - Dpp_0009*k_dt*(TkvL_0009 + TkvM_0009) + (a_dpp*pSmo_0009^d)/(M_dpp^d + pSmo_0009^d)+d_Dpp*(+(81)*Dpp_0008+(-162)*Dpp_0009+(81)*Dpp_0010)"
+"k2_dt*(DTL_0010 + DTM_0010) - Dpp_0010*b_dpp - Dpp_0010*k_dt*(TkvL_0010 + TkvM_0010) + (a_dpp*pSmo_0010^d)/(M_dpp^d + pSmo_0010^d)+d_Dpp*(+(81)*Dpp_0009+(-81)*Dpp_0010)"
+"Dpp_0001*TkvL_0001*k_dt - DTL_0001*k2_dt - DTL_0001*b_dt"
+"Dpp_0002*TkvL_0002*k_dt - DTL_0002*k2_dt - DTL_0002*b_dt"
+"Dpp_0003*TkvL_0003*k_dt - DTL_0003*k2_dt - DTL_0003*b_dt"
+"Dpp_0004*TkvL_0004*k_dt - DTL_0004*k2_dt - DTL_0004*b_dt"
+"Dpp_0005*TkvL_0005*k_dt - DTL_0005*k2_dt - DTL_0005*b_dt"
+"Dpp_0006*TkvL_0006*k_dt - DTL_0006*k2_dt - DTL_0006*b_dt"
+"Dpp_0007*TkvL_0007*k_dt - DTL_0007*k2_dt - DTL_0007*b_dt"
+"Dpp_0008*TkvL_0008*k_dt - DTL_0008*k2_dt - DTL_0008*b_dt"
+"Dpp_0009*TkvL_0009*k_dt - DTL_0009*k2_dt - DTL_0009*b_dt"
+"Dpp_0010*TkvL_0010*k_dt - DTL_0010*k2_dt - DTL_0010*b_dt"
+"Dpp_0001*TkvM_0001*k_dt - DTM_0001*k2_dt - DTM_0001*b_dt"
+"Dpp_0002*TkvM_0002*k_dt - DTM_0002*k2_dt - DTM_0002*b_dt"
+"Dpp_0003*TkvM_0003*k_dt - DTM_0003*k2_dt - DTM_0003*b_dt"
+"Dpp_0004*TkvM_0004*k_dt - DTM_0004*k2_dt - DTM_0004*b_dt"
+"Dpp_0005*TkvM_0005*k_dt - DTM_0005*k2_dt - DTM_0005*b_dt"
+"Dpp_0006*TkvM_0006*k_dt - DTM_0006*k2_dt - DTM_0006*b_dt"
+"Dpp_0007*TkvM_0007*k_dt - DTM_0007*k2_dt - DTM_0007*b_dt"
+"Dpp_0008*TkvM_0008*k_dt - DTM_0008*k2_dt - DTM_0008*b_dt"
+"Dpp_0009*TkvM_0009*k_dt - DTM_0009*k2_dt - DTM_0009*b_dt"
+"Dpp_0010*TkvM_0010*k_dt - DTM_0010*k2_dt - DTM_0010*b_dt"
+"(M_pmad*a_pmad*(DTL_0001 + DTM_0001))/(M_pmad + dad_0001) - b_pmad*pMad_0001"
+"(M_pmad*a_pmad*(DTL_0002 + DTM_0002))/(M_pmad + dad_0002) - b_pmad*pMad_0002"
+"(M_pmad*a_pmad*(DTL_0003 + DTM_0003))/(M_pmad + dad_0003) - b_pmad*pMad_0003"
+"(M_pmad*a_pmad*(DTL_0004 + DTM_0004))/(M_pmad + dad_0004) - b_pmad*pMad_0004"
+"(M_pmad*a_pmad*(DTL_0005 + DTM_0005))/(M_pmad + dad_0005) - b_pmad*pMad_0005"
+"(M_pmad*a_pmad*(DTL_0006 + DTM_0006))/(M_pmad + dad_0006) - b_pmad*pMad_0006"
+"(M_pmad*a_pmad*(DTL_0007 + DTM_0007))/(M_pmad + dad_0007) - b_pmad*pMad_0007"
+"(M_pmad*a_pmad*(DTL_0008 + DTM_0008))/(M_pmad + dad_0008) - b_pmad*pMad_0008"
+"(M_pmad*a_pmad*(DTL_0009 + DTM_0009))/(M_pmad + dad_0009) - b_pmad*pMad_0009"
+"(M_pmad*a_pmad*(DTL_0010 + DTM_0010))/(M_pmad + dad_0010) - b_pmad*pMad_0010"
+"(M_omb*a_omb)/(M_omb + brk_0001) - b_omb*omb_0001"
+"(M_omb*a_omb)/(M_omb + brk_0002) - b_omb*omb_0002"
+"(M_omb*a_omb)/(M_omb + brk_0003) - b_omb*omb_0003"
+"(M_omb*a_omb)/(M_omb + brk_0004) - b_omb*omb_0004"
+"(M_omb*a_omb)/(M_omb + brk_0005) - b_omb*omb_0005"
+"(M_omb*a_omb)/(M_omb + brk_0006) - b_omb*omb_0006"
+"(M_omb*a_omb)/(M_omb + brk_0007) - b_omb*omb_0007"
+"(M_omb*a_omb)/(M_omb + brk_0008) - b_omb*omb_0008"
+"(M_omb*a_omb)/(M_omb + brk_0009) - b_omb*omb_0009"
+"(M_omb*a_omb)/(M_omb + brk_0010) - b_omb*omb_0010"
+"(M_brk*a_brk)/(M_brk + pMad_0001) - b_brk*brk_0001"
+"(M_brk*a_brk)/(M_brk + pMad_0002) - b_brk*brk_0002"
+"(M_brk*a_brk)/(M_brk + pMad_0003) - b_brk*brk_0003"
+"(M_brk*a_brk)/(M_brk + pMad_0004) - b_brk*brk_0004"
+"(M_brk*a_brk)/(M_brk + pMad_0005) - b_brk*brk_0005"
+"(M_brk*a_brk)/(M_brk + pMad_0006) - b_brk*brk_0006"
+"(M_brk*a_brk)/(M_brk + pMad_0007) - b_brk*brk_0007"
+"(M_brk*a_brk)/(M_brk + pMad_0008) - b_brk*brk_0008"
+"(M_brk*a_brk)/(M_brk + pMad_0009) - b_brk*brk_0009"
+"(M_brk*a_brk)/(M_brk + pMad_0010) - b_brk*brk_0010"
+"(M_salb*M_salu*a_sal*pMad_0001)/((M_salb + brk_0001)*(M_salp + pMad_0001)*(M_salu + ubx)) - b_sal*sal_0001"
+"(M_salb*M_salu*a_sal*pMad_0002)/((M_salb + brk_0002)*(M_salp + pMad_0002)*(M_salu + ubx)) - b_sal*sal_0002"
+"(M_salb*M_salu*a_sal*pMad_0003)/((M_salb + brk_0003)*(M_salp + pMad_0003)*(M_salu + ubx)) - b_sal*sal_0003"
+"(M_salb*M_salu*a_sal*pMad_0004)/((M_salb + brk_0004)*(M_salp + pMad_0004)*(M_salu + ubx)) - b_sal*sal_0004"
+"(M_salb*M_salu*a_sal*pMad_0005)/((M_salb + brk_0005)*(M_salp + pMad_0005)*(M_salu + ubx)) - b_sal*sal_0005"
+"(M_salb*M_salu*a_sal*pMad_0006)/((M_salb + brk_0006)*(M_salp + pMad_0006)*(M_salu + ubx)) - b_sal*sal_0006"
+"(M_salb*M_salu*a_sal*pMad_0007)/((M_salb + brk_0007)*(M_salp + pMad_0007)*(M_salu + ubx)) - b_sal*sal_0007"
+"(M_salb*M_salu*a_sal*pMad_0008)/((M_salb + brk_0008)*(M_salp + pMad_0008)*(M_salu + ubx)) - b_sal*sal_0008"
+"(M_salb*M_salu*a_sal*pMad_0009)/((M_salb + brk_0009)*(M_salp + pMad_0009)*(M_salu + ubx)) - b_sal*sal_0009"
+"(M_salb*M_salu*a_sal*pMad_0010)/((M_salb + brk_0010)*(M_salp + pMad_0010)*(M_salu + ubx)) - b_sal*sal_0010"
+"(M_dadb*M_dadu*a_dad*pMad_0001)/((M_dadb + brk_0001)*(M_dadp + pMad_0001)*(M_dadu + ubx)) - b_dad*dad_0001"
+"(M_dadb*M_dadu*a_dad*pMad_0002)/((M_dadb + brk_0002)*(M_dadp + pMad_0002)*(M_dadu + ubx)) - b_dad*dad_0002"
+"(M_dadb*M_dadu*a_dad*pMad_0003)/((M_dadb + brk_0003)*(M_dadp + pMad_0003)*(M_dadu + ubx)) - b_dad*dad_0003"
+"(M_dadb*M_dadu*a_dad*pMad_0004)/((M_dadb + brk_0004)*(M_dadp + pMad_0004)*(M_dadu + ubx)) - b_dad*dad_0004"
+"(M_dadb*M_dadu*a_dad*pMad_0005)/((M_dadb + brk_0005)*(M_dadp + pMad_0005)*(M_dadu + ubx)) - b_dad*dad_0005"
+"(M_dadb*M_dadu*a_dad*pMad_0006)/((M_dadb + brk_0006)*(M_dadp + pMad_0006)*(M_dadu + ubx)) - b_dad*dad_0006"
+"(M_dadb*M_dadu*a_dad*pMad_0007)/((M_dadb + brk_0007)*(M_dadp + pMad_0007)*(M_dadu + ubx)) - b_dad*dad_0007"
+"(M_dadb*M_dadu*a_dad*pMad_0008)/((M_dadb + brk_0008)*(M_dadp + pMad_0008)*(M_dadu + ubx)) - b_dad*dad_0008"
+"(M_dadb*M_dadu*a_dad*pMad_0009)/((M_dadb + brk_0009)*(M_dadp + pMad_0009)*(M_dadu + ubx)) - b_dad*dad_0009"
+"(M_dadb*M_dadu*a_dad*pMad_0010)/((M_dadb + brk_0010)*(M_dadp + pMad_0010)*(M_dadu + ubx)) - b_dad*dad_0010"
+"(HP_0001*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_anterior + M_mtven)*(HP_0001 + M_mtv)) - b_mtv*mtv_0001"
+"(HP_0002*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_anterior + M_mtven)*(HP_0002 + M_mtv)) - b_mtv*mtv_0002"
+"(HP_0003*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_anterior + M_mtven)*(HP_0003 + M_mtv)) - b_mtv*mtv_0003"
+"(HP_0004*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_anterior + M_mtven)*(HP_0004 + M_mtv)) - b_mtv*mtv_0004"
+"(HP_0005*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_anterior + M_mtven)*(HP_0005 + M_mtv)) - b_mtv*mtv_0005"
+"(HP_0006*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_posterior + M_mtven)*(HP_0006 + M_mtv)) - b_mtv*mtv_0006"
+"(HP_0007*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_posterior + M_mtven)*(HP_0007 + M_mtv)) - b_mtv*mtv_0007"
+"(HP_0008*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_posterior + M_mtven)*(HP_0008 + M_mtv)) - b_mtv*mtv_0008"
+"(HP_0009*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_posterior + M_mtven)*(HP_0009 + M_mtv)) - b_mtv*mtv_0009"
+"(HP_0010*M_mtvu*M_mtven*a_mtv)/((M_mtvu + ubx)*(En_posterior + M_mtven)*(HP_0010 + M_mtv)) - b_mtv*mtv_0010"
+"DTL_0001*k2_dt - TkvL_0001*b_tkv - Dpp_0001*TkvL_0001*k_dt + (M_mt*M_ot*(a_tkv + En_anterior*a_tkven))/((M_mt + mtv_0001)*(M_ot + omb_0001))"
+"DTL_0002*k2_dt - TkvL_0002*b_tkv - Dpp_0002*TkvL_0002*k_dt + (M_mt*M_ot*(a_tkv + En_anterior*a_tkven))/((M_mt + mtv_0002)*(M_ot + omb_0002))"
+"DTL_0003*k2_dt - TkvL_0003*b_tkv - Dpp_0003*TkvL_0003*k_dt + (M_mt*M_ot*(a_tkv + En_anterior*a_tkven))/((M_mt + mtv_0003)*(M_ot + omb_0003))"
+"DTL_0004*k2_dt - TkvL_0004*b_tkv - Dpp_0004*TkvL_0004*k_dt + (M_mt*M_ot*(a_tkv + En_anterior*a_tkven))/((M_mt + mtv_0004)*(M_ot + omb_0004))"
+"DTL_0005*k2_dt - TkvL_0005*b_tkv - Dpp_0005*TkvL_0005*k_dt + (M_mt*M_ot*(a_tkv + En_anterior*a_tkven))/((M_mt + mtv_0005)*(M_ot + omb_0005))"
+"DTL_0006*k2_dt - TkvL_0006*b_tkv - Dpp_0006*TkvL_0006*k_dt + (M_mt*M_ot*(a_tkv + En_posterior*a_tkven))/((M_mt + mtv_0006)*(M_ot + omb_0006))"
+"DTL_0007*k2_dt - TkvL_0007*b_tkv - Dpp_0007*TkvL_0007*k_dt + (M_mt*M_ot*(a_tkv + En_posterior*a_tkven))/((M_mt + mtv_0007)*(M_ot + omb_0007))"
+"DTL_0008*k2_dt - TkvL_0008*b_tkv - Dpp_0008*TkvL_0008*k_dt + (M_mt*M_ot*(a_tkv + En_posterior*a_tkven))/((M_mt + mtv_0008)*(M_ot + omb_0008))"
+"DTL_0009*k2_dt - TkvL_0009*b_tkv - Dpp_0009*TkvL_0009*k_dt + (M_mt*M_ot*(a_tkv + En_posterior*a_tkven))/((M_mt + mtv_0009)*(M_ot + omb_0009))"
+"DTL_0010*k2_dt - TkvL_0010*b_tkv - Dpp_0010*TkvL_0010*k_dt + (M_mt*M_ot*(a_tkv + En_posterior*a_tkven))/((M_mt + mtv_0010)*(M_ot + omb_0010))"
+"DTM_0001*k2_dt - TkvM_0001*b_tkv - Dpp_0001*TkvM_0001*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_anterior*a_tkven))/((M_bt + brk_0001)*(M_mt + mtv_0001)*(M_st + sal_0001))"
+"DTM_0002*k2_dt - TkvM_0002*b_tkv - Dpp_0002*TkvM_0002*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_anterior*a_tkven))/((M_bt + brk_0002)*(M_mt + mtv_0002)*(M_st + sal_0002))"
+"DTM_0003*k2_dt - TkvM_0003*b_tkv - Dpp_0003*TkvM_0003*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_anterior*a_tkven))/((M_bt + brk_0003)*(M_mt + mtv_0003)*(M_st + sal_0003))"
+"DTM_0004*k2_dt - TkvM_0004*b_tkv - Dpp_0004*TkvM_0004*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_anterior*a_tkven))/((M_bt + brk_0004)*(M_mt + mtv_0004)*(M_st + sal_0004))"
+"DTM_0005*k2_dt - TkvM_0005*b_tkv - Dpp_0005*TkvM_0005*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_anterior*a_tkven))/((M_bt + brk_0005)*(M_mt + mtv_0005)*(M_st + sal_0005))"
+"DTM_0006*k2_dt - TkvM_0006*b_tkv - Dpp_0006*TkvM_0006*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_posterior*a_tkven))/((M_bt + brk_0006)*(M_mt + mtv_0006)*(M_st + sal_0006))"
+"DTM_0007*k2_dt - TkvM_0007*b_tkv - Dpp_0007*TkvM_0007*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_posterior*a_tkven))/((M_bt + brk_0007)*(M_mt + mtv_0007)*(M_st + sal_0007))"
+"DTM_0008*k2_dt - TkvM_0008*b_tkv - Dpp_0008*TkvM_0008*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_posterior*a_tkven))/((M_bt + brk_0008)*(M_mt + mtv_0008)*(M_st + sal_0008))"
+"DTM_0009*k2_dt - TkvM_0009*b_tkv - Dpp_0009*TkvM_0009*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_posterior*a_tkven))/((M_bt + brk_0009)*(M_mt + mtv_0009)*(M_st + sal_0009))"
+"DTM_0010*k2_dt - TkvM_0010*b_tkv - Dpp_0010*TkvM_0010*k_dt + (M_bt*M_mt*M_st*(a_tkv + En_posterior*a_tkven))/((M_bt + brk_0010)*(M_mt + mtv_0010)*(M_st + sal_0010))"
+
+DERIVED
+Tkv_0001  C  au  conc.  "TkvL_0001 + TkvM_0001"
+Tkv_0002  C  au  conc.  "TkvL_0002 + TkvM_0002"
+Tkv_0003  C  au  conc.  "TkvL_0003 + TkvM_0003"
+Tkv_0004  C  au  conc.  "TkvL_0004 + TkvM_0004"
+Tkv_0005  C  au  conc.  "TkvL_0005 + TkvM_0005"
+Tkv_0006  C  au  conc.  "TkvL_0006 + TkvM_0006"
+Tkv_0007  C  au  conc.  "TkvL_0007 + TkvM_0007"
+Tkv_0008  C  au  conc.  "TkvL_0008 + TkvM_0008"
+Tkv_0009  C  au  conc.  "TkvL_0009 + TkvM_0009"
+Tkv_0010  C  au  conc.  "TkvL_0010 + TkvM_0010"
+DT_0001  C  au  conc.  "DTL_0001 + DTM_0001"
+DT_0002  C  au  conc.  "DTL_0002 + DTM_0002"
+DT_0003  C  au  conc.  "DTL_0003 + DTM_0003"
+DT_0004  C  au  conc.  "DTL_0004 + DTM_0004"
+DT_0005  C  au  conc.  "DTL_0005 + DTM_0005"
+DT_0006  C  au  conc.  "DTL_0006 + DTM_0006"
+DT_0007  C  au  conc.  "DTL_0007 + DTM_0007"
+DT_0008  C  au  conc.  "DTL_0008 + DTM_0008"
+DT_0009  C  au  conc.  "DTL_0009 + DTM_0009"
+DT_0010  C  au  conc.  "DTL_0010 + DTM_0010"
+
+CONDITIONS
+init_Hh_0001   "0.000000"
+init_Hh_0002   "0.000000"
+init_Hh_0003   "0.000000"
+init_Hh_0004   "0.000000"
+init_Hh_0005   "0.000000"
+init_Hh_0006   "0.000000"
+init_Hh_0007   "0.000000"
+init_Hh_0008   "0.000000"
+init_Hh_0009   "0.000000"
+init_Hh_0010   "0.000000"
+init_Ptc_0001   "0.065000"
+init_Ptc_0002   "0.065000"
+init_Ptc_0003   "0.065000"
+init_Ptc_0004   "0.065000"
+init_Ptc_0005   "0.065000"
+init_Ptc_0006   "0.000001"
+init_Ptc_0007   "0.000001"
+init_Ptc_0008   "0.000001"
+init_Ptc_0009   "0.000001"
+init_Ptc_0010   "0.000001"
+init_HP_0001   "0.000000"
+init_HP_0002   "0.000000"
+init_HP_0003   "0.000000"
+init_HP_0004   "0.000000"
+init_HP_0005   "0.000000"
+init_HP_0006   "0.000000"
+init_HP_0007   "0.000000"
+init_HP_0008   "0.000000"
+init_HP_0009   "0.000000"
+init_HP_0010   "0.000000"
+init_pSmo_0001   "0.000000"
+init_pSmo_0002   "0.000000"
+init_pSmo_0003   "0.000000"
+init_pSmo_0004   "0.000000"
+init_pSmo_0005   "0.000000"
+init_pSmo_0006   "0.000000"
+init_pSmo_0007   "0.000000"
+init_pSmo_0008   "0.000000"
+init_pSmo_0009   "0.000000"
+init_pSmo_0010   "0.000000"
+init_Dpp_0001   "0.000000"
+init_Dpp_0002   "0.000000"
+init_Dpp_0003   "0.000000"
+init_Dpp_0004   "0.000000"
+init_Dpp_0005   "0.000000"
+init_Dpp_0006   "0.000000"
+init_Dpp_0007   "0.000000"
+init_Dpp_0008   "0.000000"
+init_Dpp_0009   "0.000000"
+init_Dpp_0010   "0.000000"
+init_DTL_0001   "0.000000"
+init_DTL_0002   "0.000000"
+init_DTL_0003   "0.000000"
+init_DTL_0004   "0.000000"
+init_DTL_0005   "0.000000"
+init_DTL_0006   "0.000000"
+init_DTL_0007   "0.000000"
+init_DTL_0008   "0.000000"
+init_DTL_0009   "0.000000"
+init_DTL_0010   "0.000000"
+init_DTM_0001   "0.000000"
+init_DTM_0002   "0.000000"
+init_DTM_0003   "0.000000"
+init_DTM_0004   "0.000000"
+init_DTM_0005   "0.000000"
+init_DTM_0006   "0.000000"
+init_DTM_0007   "0.000000"
+init_DTM_0008   "0.000000"
+init_DTM_0009   "0.000000"
+init_DTM_0010   "0.000000"
+init_pMad_0001   "0.000000"
+init_pMad_0002   "0.000000"
+init_pMad_0003   "0.000000"
+init_pMad_0004   "0.000000"
+init_pMad_0005   "0.000000"
+init_pMad_0006   "0.000000"
+init_pMad_0007   "0.000000"
+init_pMad_0008   "0.000000"
+init_pMad_0009   "0.000000"
+init_pMad_0010   "0.000000"
+init_omb_0001   "0.000000"
+init_omb_0002   "0.000000"
+init_omb_0003   "0.000000"
+init_omb_0004   "0.000000"
+init_omb_0005   "0.000000"
+init_omb_0006   "0.000000"
+init_omb_0007   "0.000000"
+init_omb_0008   "0.000000"
+init_omb_0009   "0.000000"
+init_omb_0010   "0.000000"
+init_brk_0001   "0.000000"
+init_brk_0002   "0.000000"
+init_brk_0003   "0.000000"
+init_brk_0004   "0.000000"
+init_brk_0005   "0.000000"
+init_brk_0006   "0.000000"
+init_brk_0007   "0.000000"
+init_brk_0008   "0.000000"
+init_brk_0009   "0.000000"
+init_brk_0010   "0.000000"
+init_sal_0001   "0.000000"
+init_sal_0002   "0.000000"
+init_sal_0003   "0.000000"
+init_sal_0004   "0.000000"
+init_sal_0005   "0.000000"
+init_sal_0006   "0.000000"
+init_sal_0007   "0.000000"
+init_sal_0008   "0.000000"
+init_sal_0009   "0.000000"
+init_sal_0010   "0.000000"
+init_dad_0001   "0.000000"
+init_dad_0002   "0.000000"
+init_dad_0003   "0.000000"
+init_dad_0004   "0.000000"
+init_dad_0005   "0.000000"
+init_dad_0006   "0.000000"
+init_dad_0007   "0.000000"
+init_dad_0008   "0.000000"
+init_dad_0009   "0.000000"
+init_dad_0010   "0.000000"
+init_mtv_0001   "0.000000"
+init_mtv_0002   "0.000000"
+init_mtv_0003   "0.000000"
+init_mtv_0004   "0.000000"
+init_mtv_0005   "0.000000"
+init_mtv_0006   "0.000000"
+init_mtv_0007   "0.000000"
+init_mtv_0008   "0.000000"
+init_mtv_0009   "0.000000"
+init_mtv_0010   "0.000000"
+init_TkvL_0001   "0.000000"
+init_TkvL_0002   "0.000000"
+init_TkvL_0003   "0.000000"
+init_TkvL_0004   "0.000000"
+init_TkvL_0005   "0.000000"
+init_TkvL_0006   "0.000000"
+init_TkvL_0007   "0.000000"
+init_TkvL_0008   "0.000000"
+init_TkvL_0009   "0.000000"
+init_TkvL_0010   "0.000000"
+init_TkvM_0001   "0.000000"
+init_TkvM_0002   "0.000000"
+init_TkvM_0003   "0.000000"
+init_TkvM_0004   "0.000000"
+init_TkvM_0005   "0.000000"
+init_TkvM_0006   "0.000000"
+init_TkvM_0007   "0.000000"
+init_TkvM_0008   "0.000000"
+init_TkvM_0009   "0.000000"
+init_TkvM_0010   "0.000000"
+

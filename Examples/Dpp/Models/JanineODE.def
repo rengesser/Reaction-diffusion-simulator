@@ -1,0 +1,63 @@
+// Morphogen-Gradient model 
+STATES   // "name"  diffusion_true (1 mobile, 0 imobile)
+//Chen
+Hh    1
+Ptc  0
+HP   0
+pSmo 0
+Dpp 1
+DTL 0
+DTM 0
+//Nahmad
+pMad 0
+omb 0
+brk 0
+sal 0
+dad 0
+// Self
+mtv 0
+TkvL 0
+TkvM 0
+
+EQUATIONS
+// Chen
+" a_hh * En_anterior - k_hp * Hh * Ptc +k2_hp*HP - b_hh * Hh " 
+" a_ptc * (1-En_anterior) + a_psmoptc * pSmo^p /(M_ptc^p + pSmo^p) - k_hp*Hh*Ptc - b_ptc * Ptc" 
+" k_hp*Hh*Ptc - k2_hp*HP - b_hp*HP"
+" a_psmo * (1-En_anterior) * (HP/Ptc)^s / (M_psmo^s +(HP/Ptc)^s ) - b_psmo*pSmo"
+" a_dpp * pSmo^d /(M_dpp^d + pSmo^d) - k_dt*Dpp*(TkvL+TkvM) + k2_dt*(DTL+DTM) -b_dpp * Dpp"
+" k_dt * Dpp*TkvL - k2_dt*DTL - b_dt * DTL "
+" k_dt * Dpp*TkvM - k2_dt*DTM - b_dt * DTM "
+// Nahmad 08
+" a_pmad * (DTL+DTM) * M_pmad / (M_pmad + dad) -b_pmad * pMad"                                   // ohne hill coefficients
+" a_omb * M_omb / (M_omb + brk) - b_omb*omb "                                                       // ohne pMad
+" a_brk * M_brk /(M_brk + pMad) - b_brk * brk " 
+" a_sal * pMad /(M_salp + pMad) * M_salb /(M_salb + brk) *  M_salu / (M_salu + ubx) - b_sal*sal "                // ubx
+" a_dad * pMad /(M_dadp + pMad) * M_dadb /(M_dadb + brk) *  M_dadu / (M_dadu + ubx) - b_dad*dad "                                    // ubx
+// Self
+" a_mtv * HP / (M_mtv + HP) * M_mtven / (M_mtven + En_anterior) * M_mtvu / (M_mtvu + ubx) - b_mtv*mtv "
+" (a_tkv + a_tkven *En_anterior) *M_mt /(M_mt +mtv) * M_ot /(M_ot +omb )  - k_dt*Dpp*TkvL + k2_dt*DTL - b_tkv * TkvL"
+" (a_tkv + a_tkven *En_anterior) *M_mt /(M_mt +mtv) * M_st /(M_st +sal ) * M_bt /(M_bt +brk )  - k_dt*Dpp*TkvM + k2_dt*DTM - b_tkv * TkvM"
+
+PARAMETERFIELDS
+
+DERIVED
+Tkv "TkvL + TkvM"
+DT  " DTL + DTM "
+
+INITS
+Hh 6 0 0 0 0 
+Ptc 5 6.5e-2 0 0.5 0 
+HP 6 0 0 0 0 
+pSmo 6 0 0 0 0  
+Dpp 6 0 0 0 0 
+DTL 6 0 0 0 0
+DTM 6 0 0 0 0
+pMad 6 0 0 0 0 
+brk 6 0 0 0 0 
+sal 6 0 0 0 0
+dad 6 0 0 0 0
+omb 6 0 0 0 0
+mtv 6 0 0 0 0 
+TkvL 6 0 0 0 0 
+TkvM 6 0 0 0 0 

@@ -1,0 +1,54 @@
+DESCRIPTION
+"Exported model from JanineODE.def."
+"13-Sep-2019 21:00:44"
+
+PREDICTOR
+t  T  h  time 10.000000 100.000000 
+
+INPUTS
+
+OBSERVABLES
+dad_0001_obs  C  au  conc.  0  0 "offset_dad + dad_0001 * scale_dad" 
+dad_0002_obs  C  au  conc.  0  0 "offset_dad + dad_0002 * scale_dad" 
+dad_0003_obs  C  au  conc.  0  0 "offset_dad + dad_0003 * scale_dad" 
+dad_0004_obs  C  au  conc.  0  0 "offset_dad + dad_0004 * scale_dad" 
+dad_0005_obs  C  au  conc.  0  0 "offset_dad + dad_0005 * scale_dad" 
+dad_0006_obs  C  au  conc.  0  0 "offset_dad + dad_0006 * scale_dad" 
+dad_0007_obs  C  au  conc.  0  0 "offset_dad + dad_0007 * scale_dad" 
+dad_0008_obs  C  au  conc.  0  0 "offset_dad + dad_0008 * scale_dad" 
+dad_0009_obs  C  au  conc.  0  0 "offset_dad + dad_0009 * scale_dad" 
+dad_0010_obs  C  au  conc.  0  0 "offset_dad + dad_0010 * scale_dad" 
+Tkv_0001_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0001 * scale_Tkv" 
+Tkv_0002_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0002 * scale_Tkv" 
+Tkv_0003_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0003 * scale_Tkv" 
+Tkv_0004_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0004 * scale_Tkv" 
+Tkv_0005_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0005 * scale_Tkv" 
+Tkv_0006_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0006 * scale_Tkv" 
+Tkv_0007_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0007 * scale_Tkv" 
+Tkv_0008_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0008 * scale_Tkv" 
+Tkv_0009_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0009 * scale_Tkv" 
+Tkv_0010_obs  C  au  conc.  0  0 "offset_Tkv + Tkv_0010 * scale_Tkv" 
+
+ERRORS
+dad_0001_obs  "sd_dad * dad_0001_obs" 
+dad_0002_obs  "sd_dad * dad_0002_obs" 
+dad_0003_obs  "sd_dad * dad_0003_obs" 
+dad_0004_obs  "sd_dad * dad_0004_obs" 
+dad_0005_obs  "sd_dad * dad_0005_obs" 
+dad_0006_obs  "sd_dad * dad_0006_obs" 
+dad_0007_obs  "sd_dad * dad_0007_obs" 
+dad_0008_obs  "sd_dad * dad_0008_obs" 
+dad_0009_obs  "sd_dad * dad_0009_obs" 
+dad_0010_obs  "sd_dad * dad_0010_obs" 
+Tkv_0001_obs  "sd_Tkv * Tkv_0001_obs"
+Tkv_0002_obs  "sd_Tkv * Tkv_0002_obs"
+Tkv_0003_obs  "sd_Tkv * Tkv_0003_obs"
+Tkv_0004_obs  "sd_Tkv * Tkv_0004_obs"
+Tkv_0005_obs  "sd_Tkv * Tkv_0005_obs"
+Tkv_0006_obs  "sd_Tkv * Tkv_0006_obs"
+Tkv_0007_obs  "sd_Tkv * Tkv_0007_obs"
+Tkv_0008_obs  "sd_Tkv * Tkv_0008_obs"
+Tkv_0009_obs  "sd_Tkv * Tkv_0009_obs"
+Tkv_0010_obs  "sd_Tkv * Tkv_0010_obs"
+
+CONDITIONS
