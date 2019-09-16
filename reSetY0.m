@@ -84,7 +84,8 @@ switch kind
         end
     case 'xrange'
         if sigma~=1
-            Y0 = c * (x>x0(1) & x<x0(2));
+            Y0 = c * (x>=x0(1) & x<=x0(2));
+            Y0(Y0==0) = 1e-6;
         else
             Y0 = c * (x<x0(1) | x>x0(2));                 % if sigma=1, xrange at start/end
         end

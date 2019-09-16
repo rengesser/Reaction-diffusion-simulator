@@ -69,12 +69,13 @@ if ~isempty(str{1})
 end
 
 %%% DERIVED
-z = {};
-str=textscan(fid,'%s',1,'commentStyle','//');
+z = {}; fz = {};
+str=textscan(fid,'%q%q',1,'commentStyle','//');
 
 while(~strcmp(str{1},'INITS'))
     z(end+1) = str{1};
-    str=textscan(fid,'%s',1,'commentStyle','//');
+    fz{end+1} = str{2}{:};
+    str=textscan(fid,'%q%q',1,'commentStyle','//');
 end
 
 %%INITS  // name kind c x0(1) x0(2) sigma
@@ -147,6 +148,7 @@ re.yLabel = states;
 re.ySymbolic = sym(states,'clear');
 
 re.z = z;
+re.fz = arSym(fz);
 
 re.pLabel = pLabel;
 re.pSymbolic =pLabel;
