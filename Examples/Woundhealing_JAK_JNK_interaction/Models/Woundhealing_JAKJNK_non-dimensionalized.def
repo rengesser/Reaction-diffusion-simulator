@@ -1,0 +1,16 @@
+// model definition for parameter scan, variables have to be in form u1, u2, u3 ...
+STATES   // "name"  diffusion_true (1 mobile, 0 imobile)
+eiger 1
+JNK   0
+JAK        0
+Upd   1
+
+EQUATIONS
+" gamma1 * (bool_b_eiger - eiger + k_act_eiger * JNK^n1 / (Km_act_eiger^n1 + JNK^n1)) "
+" gamma1 * (1 - k_deg_JNK * JNK + k_act_JNK * eiger^n2 / (Km_act_JNK^n2 + eiger^n2) / (1+k_inh_JNK_by_JAK^ni1 * JAK^ni1))  "
+" gamma1 * (1 - k_deg_JAK * JAK + k_act_JAK * Upd * JAK^n3/(Km_act_JAK^n3+JAK^n3) / (1+k_inh_JAK_by_JNK^ni2 * JNK^ni2)) "
+" gamma1 * (1 - k_deg_Upd * Upd + k_act_Upd * JNK^n4 / (Km_act_Upd^n4 + JNK^n4)) "
+
+
+PARAMETERFIELDS
+bool_b_eiger
