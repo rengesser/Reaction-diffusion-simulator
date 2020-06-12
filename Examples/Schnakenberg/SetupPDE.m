@@ -33,8 +33,8 @@ rePlotPDE;
 % the second dimension contains the concentrations of all states at all
 % spatial points. 
 % A single state can be accessed by the index field re.PDE.ctr. 
-% If you want the simulations of state ns at re.PDE.t(ti)
-% just call re.PDE.ctr( ti, re.PDE.ctr + ni -1).
+% If you want the simulations of state ni at re.PDE.t(ti)
+% just call re.PDE.ctr( ti, re.PDE.ctr + ni - 1).
 % In two dimensions you can just reshape the resulting 1dim vector with 
 % reshape(Y_state2(end,:),re.PDE.xmax,re.PDE.ymax)
 
