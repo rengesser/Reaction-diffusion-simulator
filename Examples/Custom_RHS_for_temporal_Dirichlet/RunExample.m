@@ -37,6 +37,7 @@ re.A = 2;          % Amplitude of the input sinus
 
 reSimuPDESys_timeDirichlet
 
+re.plot.global_clims = 1;
 re.plot.ts=0:0.01:1;
 rePlotPDE
 

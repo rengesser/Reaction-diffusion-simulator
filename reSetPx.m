@@ -10,7 +10,7 @@ function reSetPx(idpx)
 % ['xstep'], 'circle', '2dgaussian', 'constant', '1dgaussian', 'xrange'
 % re.pxOpt.x0: middle of circle, gaussians, step or range
 % re.pxOpt.c:  multiplicative constant which determines max(px(:))
-% re.pxOpt.sigma: variance of gaussians
+% re.pxOpt.sigma: variance of gaussians; radius of circle
 
 
 global re
@@ -57,7 +57,12 @@ if ~isfield(re.pxOpt(idpx),'c')
     re.pxOpt(idpx).c = 1;
 end
 
-kind = re.pxOpt(idpx).kinds{re.pxOpt(idpx).idkind};
+if ~isfield(re.pxOpt, 'kind')
+    kind = re.pxOpt(idpx).kinds{re.pxOpt(idpx).idkind};
+else
+    kind = re.pxOpt.kind;
+end
+
 x0 = re.pxOpt(idpx).x0;
 sigma = re.pxOpt(idpx).sigma;
 c = re.pxOpt(idpx).c;
