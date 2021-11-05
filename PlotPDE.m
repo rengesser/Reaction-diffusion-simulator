@@ -18,10 +18,9 @@ end
 if X || Z
     if X
         nPlots = length(ar.model.x);
-    else
-        nPlots = 0;
-    end
-    if Z
+    elseif Y
+        nPlots = length(ar.model.data);
+    elseif Z
         nPlots = nPlots + length(ar.model.z);
     end
     
@@ -67,13 +66,17 @@ for i=1:length(names)/n
     
     for c=1:length(ar.model.condition)
         x = (i-1)*n+1:i*n;
-        plot(data(idxt(c),x,c))
+        plot(data(idxt(c),x,c),'LineWidth',3)
     end
     
     obs = split(names{i*n},'_');
     title([namefield ': ' obs{1}])
     if s3+i==1
-        legend(ar.model.plot(i).condition)
+        if ~isempty(ar.model.plot(i).condition)
+            legend(ar.model.plot(i).condition)
+        elseif ~isempty(ar.model.data(ar.model.plot(i).dLink).condition.parameter) && ~isempty(ar.model.data(ar.model.plot(i).dLink).condition.value)
+            legend('ubx=0','ubx=1')       
+        end
     end
     if s3+i>s2*(s1-1)
         xlabel('position [au]')

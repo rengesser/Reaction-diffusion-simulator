@@ -60,7 +60,7 @@ str=textscan(fid,'%s',1,'commentStyle','//');
 parafields={};
 if ~isempty(str{1})
     while(~strcmp(str{1},'INITS') && (~strcmp(str{1},'DERIVED')))
-        parafields=str{:};
+        parafields(end+1)=str{:};
         str=textscan(fid,'%s',1,'commentStyle','//');
         if isempty(str{1})
             break
@@ -115,10 +115,8 @@ id_paras  = ~ismember(variables_cell,states);
 
 p_px_Label = variables_cell(id_paras); 
 
-id_p = ~ismember(p_px_Label,parafields);
-id_px = ismember(p_px_Label,parafields);
-pLabel = p_px_Label(id_p);
-pxLabel = p_px_Label(id_px);
+pLabel = p_px_Label(~ismember(p_px_Label,parafields));
+pxLabel= p_px_Label( ismember(p_px_Label,parafields));
 
 if length(pxLabel) ~= length(parafields)
     id_notdefined = ~ismember(parafields,pxLabel);
